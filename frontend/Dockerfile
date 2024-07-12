@@ -1,17 +1,17 @@
 # Usa una imagen base de Node.js
-FROM node:14
+FROM node:alpine
 
 # Establece el directorio de trabajo en el contenedor
 WORKDIR /usr/src/app
 
 # Copia el archivo package.json y package-lock.json (si está disponible)
-COPY package*.json ./
+COPY . /usr/src/app/
 
 # Instala las dependencias
+
+RUN npm instal -g angular
 RUN npm install
 
-# Copia el resto de la aplicación
-COPY . .
 
 # Expone el puerto en el que tu aplicación estará corriendo
 EXPOSE 8000
