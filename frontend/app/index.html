@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<base href="/">-->
+  <title>Memorama</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--<link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">-->
+   <!--<link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">-->
+  <link rel="stylesheet" href="app.css">
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="lib/angular-material/angular-material.min.css">
+  
+  <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+  
+  <div ng-view></div>
+
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="lib/angular-resource/angular-resource.js"></script>
+
+  <!-- Angular Material JS -->
+<script src="lib/angular-animate/angular-animate.min.js"></script>
+<script src="lib/angular-aria/angular-aria.min.js"></script>
+<script src="lib/angular-material/angular-material.min.js"></script>
+
+  <script src="app.js"></script>
+  <script src="game/game.module.js"></script>
+  <script src="game/game.component.js"></script>
+
+  <script src="end/end.module.js"></script>
+  <script src="end/end.component.js"></script>
+
+
+  <script src="start/start.module.js"></script>
+  <script src="start/start.component.js"></script>
+  <script src="services/services.module.js"></script>
+  <script src="services/score.service.js"></script>
+  <script src="services/game.service.js"></script>
+  <script src="services/userData.service.js"></script>
+  <script src="services/pixabay.service.js"></script>
+
+  
+
+</body>
+</html>

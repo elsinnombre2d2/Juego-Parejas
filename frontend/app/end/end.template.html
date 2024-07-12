@@ -1,0 +1,25 @@
+<div class="container" layout="column" layout-align="center center">
+    <h1 class="md-display-2 text-center">¡Juego Completado!</h1>
+    
+    <md-card flex-gt-xs="60" flex-gt-md="40" class="md-whiteframe-z2">
+      <md-card-content layout="column" layout-align="center center">
+        <div layout="column" flex layout-align="center center">
+          <h2 class="md-headline">Tiempo total: {{ $ctrl.time / 10 }} segundos</h2>
+          <h3 class="md-subhead">Posición en el listado:</h3>
+          <p style="font-size: 20px">{{ $ctrl.position }}</p>
+        </div>
+        
+        <div layout="column" flex layout-align="center center">
+          <p><strong>Nombre:</strong> {{ $ctrl.userName }}</p>
+          <p><strong>Equipo:</strong> {{ $ctrl.userTeam }}</p>
+          <p><strong>Movimientos realizados:</strong> {{ $ctrl.movements }}</p>
+        </div>
+        
+        <div layout="row" layout-align="center center">
+          <md-button class="md-raised md-primary md-margin" ng-click="$ctrl.restartGame()">Volver a Jugar</md-button>
+          <md-button class="md-raised md-primary md-margin" ng-click="$ctrl.toStart()">Menú de Inicio</md-button>
+        </div>
+      </md-card-content>
+    </md-card>
+  </div>
+  

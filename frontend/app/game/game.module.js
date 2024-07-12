@@ -1,0 +1,1 @@
+angular.module('game',['ngRoute','ngAnimate','ngMaterial']);

@@ -1,0 +1,32 @@
+<div layout="row" layout-wrap layout-align="center center" class="game-board">
+    <md-content flex="80">
+      <div ng-if="$ctrl.loading" class="loading-indicator">
+        <md-progress-circular md-mode="indeterminate" md-diameter="80"></md-progress-circular>
+        
+      </div>
+      <div ng-if="!$ctrl.loading">
+      <md-grid-list md-cols-xs="2" md-cols-sm="2" md-cols-md="5" md-cols-gt-md="5" md-row-height="4:3" md-gutter="8px" >
+        <md-grid-tile ng-repeat="card in $ctrl.cards" >
+
+          <md-card class="thecard" ng-class="{ 'flipped': card.flipped, 'matched': card.matched }" ng-click="$ctrl.selectCard(card)" >
+
+                <button class="thefront"  ng-disabled="$ctrl.busy || card.matched" ng-style="{'background-image': 'url(' + $ctrl.reverse + ')'}"> </button>
+                <button class="theback" ng-disabled="$ctrl.busy || card.matched" ng-style="{'background-image': 'url(' + card.content + ')'}"><p ></p></button>>
+
+          </md-card>
+        </md-grid-tile>
+      </md-grid-list>
+      <div class="game-stats">
+        <div class="game-stat">
+          <strong>Movimientos:</strong> {{$ctrl.moves}}
+        </div>
+        <div class="game-stat">
+          <strong>Tiempo:</strong> {{$ctrl.time / 10 | number:1}}
+        </div>
+      </div>
+    </div>
+
+      <div>{{ctrl.anverse}}</div>
+    </md-content>
+  </div>
+  
