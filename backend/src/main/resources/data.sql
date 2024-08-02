@@ -1,3 +1,3 @@
 
-INSERT INTO scores (userName, team, moves, time) VALUES
-    ('Alice', 'Team A', 10, 15000);
+INSERT INTO scores (user_name, team, moves, time) VALUES
+    ('Mary', 'Team A', 10, 15000);

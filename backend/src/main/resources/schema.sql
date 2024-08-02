@@ -1,6 +1,6 @@
 CREATE TABLE scores (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    userName VARCHAR(255) NOT NULL,
+    user_name VARCHAR(255) NOT NULL,
     team VARCHAR(255) NOT NULL,
     moves INT NOT NULL,
     time BIGINT NOT NULL
