@@ -7,9 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.backend.jpa.ScoreRepository;
-import com.example.backend.mapper.ScoreMapper;
 import com.example.backend.model.Score;
-import com.example.backend.model.Score;
+
 
 import jakarta.validation.Valid;
 
@@ -21,9 +20,8 @@ public class ScoreService {
     private ScoreRepository scoreRepository;
 
     public List<Score> getTopScores() {
-        //return scoreRepository.getTopScores();
-        //return scoreMapper.getTopScores();
-        return null;
+        return scoreRepository.getTopScores();
+
     }
 
     public List<Score> findAll() {
@@ -33,39 +31,30 @@ public class ScoreService {
             scoreList.add(score);
         }
         return scoreList;
-
-        // return scoreMapper.findAll();
     }
 
     public int getPosition(Long id) {
-        //return scoreRepository.getPosition(id);
-        return 0;
-        //return scoreMapper.getPosition(id);
+        return scoreRepository.getPosition(id);
     }
 
     
     public Score findById(Long id) {
         return scoreRepository.findById(id).get();
-        //return scoreMapper.findById(id);
+
     }
 
-    public Score insert(Score score) {
-        //scoreMapper.insert(score);
+    public Score insert(@Valid Score score) {
         scoreRepository.save(score);
         return score;
     }
 
     public void update(@Valid Score score) {
         scoreRepository.save(score);
-        //scoreMapper.update(score);
-
     }
 
     public boolean delete(Long id) {
         scoreRepository.delete(scoreRepository.findById(id).get());
-        //scoreMapper.delete(id);
         return true;
-
     }
 
 }

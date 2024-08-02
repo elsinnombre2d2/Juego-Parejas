@@ -25,13 +25,13 @@ public class Score {
     @Column(name = "user_name")
     private String userName;
 
-    //@Column
+    @Column
     private String team;
 
-    //@Column
+    @Column
     private int moves;
 
-    //@Column
+    @Column
     private long time;
 
     
