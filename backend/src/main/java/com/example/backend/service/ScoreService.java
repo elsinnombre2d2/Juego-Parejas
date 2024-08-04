@@ -39,7 +39,7 @@ public class ScoreService {
 
     
     public Score findById(Long id) {
-        return scoreRepository.findById(id).get();
+        return scoreRepository.findById(id);
 
     }
 
@@ -49,11 +49,11 @@ public class ScoreService {
     }
 
     public void update(@Valid Score score) {
-        scoreRepository.save(score);
+        scoreRepository.update(score);
     }
 
     public boolean delete(Long id) {
-        scoreRepository.delete(scoreRepository.findById(id).get());
+        scoreRepository.delete(id);
         return true;
     }
 
